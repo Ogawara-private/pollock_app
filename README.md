@@ -38,36 +38,40 @@ Table4-2　メッセージテーブル
 ・パスワード入力
 ・ログインボタン
  
-
+<img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/b8b97a88-512e-406d-8eb4-74e2671ac82a" />
 
 4.2.新規登録画面
 ・ユーザー名入力
 ・登録メールアドレス入力
 ・パスワード入力(確認用に2回)
 ・登録ボタン
- 
+
+
+ <img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/d2d71e5b-1b5f-4e20-b057-ca85b2fe7c3c" />
+
 
 
 4.3.チャット画面
 　・メッセージ表示エリア
 　・メッセージ入力欄
- <img width="886" height="664" alt="image" src="https://github.com/user-attachments/assets/b8b97a88-512e-406d-8eb4-74e2671ac82a" />
 
+ <img width="414" height="902" alt="image" src="https://github.com/user-attachments/assets/3025aac4-ffaf-49c9-9f2c-65926cbef8df" />
 
-
-
+ 
 
 4.4.勉強報告投稿画面
 　・投稿内容入力欄
 4.5.勉強報告内容確認画面
 　・投稿内容反応ボタン(スタンプ)
  
+<img width="886" height="662" alt="image" src="https://github.com/user-attachments/assets/2b479257-d36d-460a-b555-1ef1be14f18f" />
 
 
 
 4.6.ランキング画面
 　・週ごとの順位表示エリア
  
+<img width="396" height="881" alt="image" src="https://github.com/user-attachments/assets/e30f1f52-a17e-47de-9531-6dfbb44f3ba6" />
 
 
 4.7.マイページ画面
