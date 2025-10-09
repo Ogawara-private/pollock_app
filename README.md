@@ -26,19 +26,10 @@
 
 3.	DB設計(あくまでも案)
 Table4-1 ユーザーテーブル
-カラム名	型	説明
-id	INT	ユーザーID(Primary_Key)
-username	VARCHAR	ユーザー名
-password	VARCHAR	パスワード
+
 
 Table4-2　メッセージテーブル
-カラム名	型	説明
-id	INT	メッセージID(Primary_Key)
-sender_id	INT	送信者ID(ユーザーIDと紐づけ)
-receiver_id	INT	受信者ID(ユーザーIDと紐づけ)
-Message	TEXT	メッセージ内容
-created_at	DATETIME	送信日時
-		
+
 		
 
 4.画面設計（pollock-study-app – Figma）
@@ -60,7 +51,8 @@ created_at	DATETIME	送信日時
 4.3.チャット画面
 　・メッセージ表示エリア
 　・メッセージ入力欄
- 
+ <img width="886" height="664" alt="image" src="https://github.com/user-attachments/assets/b8b97a88-512e-406d-8eb4-74e2671ac82a" />
+
 
 
 
