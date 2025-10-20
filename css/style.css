@@ -1,0 +1,94 @@
+body {
+  font-family: sans-serif;
+  background: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-container, .chat-container {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  width: 500px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.input-area {
+  display: flex;             /* 横並びにする */
+  align-items: center;       /* 縦位置をそろえる */
+  gap: 10px;                 /* 入力欄とボタンの間に余白を入れる */
+  margin-top: 10px;
+}
+
+/* 入力ボックス */
+#messageInput {
+  flex: 1;                   /* 空いた幅を自動で広げる */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* 送信ボタン */
+#sendBtn {
+    width: 100px;
+  padding: 10px 20px;
+  background-color: orange;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#sendBtn:hover {
+  background-color: #145ca4;
+}
+
+
+input {
+  width: 50%;
+  padding: 8px;
+  margin: 8px 0;
+}
+
+button {
+  text-align: center;
+  width: 50%;
+  padding: 8px;
+  margin: 8px 0;
+  background: orange;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+h1 {
+    text-align: center;
+    color: orange;
+}
+
+h2 {
+    text-align: center;
+    color: orange;
+}
+
+h3 {
+    color: red;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+li {
+  margin: 5px 0;
+}
