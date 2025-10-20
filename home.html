@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ホーム - 資格勉強チャットアプリ</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="home-body">
+  <!-- ヘッダー -->
+  <header class="top-menu">
+    <h1 class="home-title">📚資格勉強チャットアプリ</h1>
+    <nav>
+      <button id="homeBtn">🏠 ホーム</button>
+      <button id="chatBtn">💬 チャット</button>
+      <button id="logoutBtn">🚪 ログアウト</button>
+    </nav>
+  </header>
+
+  <!-- メインコンテンツ -->
+  <main>
+    <h2 id="welcome"></h2>
+    <p>ここからチャットや他の機能にアクセスできます。</p>
+  </main>
+
+  <script>
+    // ログインユーザー確認
+    const user = localStorage.getItem('chatUser');
+    if (!user) {
+      window.location.href = 'index.html';
+    }
+    document.getElementById('welcome').textContent = `${user} さん、こんにちは！`;
+
+    // ボタン動作
+    document.getElementById('homeBtn').addEventListener('click', () => {
+      window.location.href = 'home.html';
+    });
+    document.getElementById('chatBtn').addEventListener('click', () => {
+      window.location.href = 'chat.html';
+    });
+    document.getElementById('logoutBtn').addEventListener('click', () => {
+      localStorage.removeItem('chatUser');
+      window.location.href = 'index.html';
+    });
+  </script>
+</body>
+</html>

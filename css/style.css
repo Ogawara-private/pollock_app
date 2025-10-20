@@ -7,7 +7,105 @@ body {
   height: 100vh;
 }
 
-.login-container, .chat-container {
+/*homeのBodyに適応 */
+.home-body {
+  font-family: sans-serif;
+  margin: 0;
+  background: #f8f8f8;
+  display: block; /* ← flex を外す */
+}
+
+/*homeのBodyに適応 */
+.top-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: orange;
+  color: white;
+  padding: 10px 20px;
+}
+
+/*homeのBodyに適応 */
+.top-menu h1 {
+  font-size: 20px;
+}
+
+/*homeのBodyに適応 */
+.top-menu nav button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: white;
+  color: orange;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+/*homeのタイトル */
+.home-title {
+  color: white;
+}
+
+/*homeのメニューの調整 */
+.top-menu {
+  display: flex;
+  justify-content: space-between; /* 左右に分ける */
+  align-items: center;            /* 垂直中央揃え */
+  background-color: orange;
+  color: white;
+  padding: 10px 20px;
+  flex-wrap: wrap; /* 画面が狭いと折り返す */
+}
+
+/*homeのメニューの調整2 */
+.top-menu nav {
+  display: flex;        /* 横並びにする */
+  gap: 10px;            /* ボタン間のスペース */
+  flex: 1;              /* 余白を均等に */
+  justify-content: flex-end; /* 右寄せ */
+}
+
+/*homeのメニューの効果 */
+.top-menu nav button:hover {
+  background-color: #e0e0e0;
+}
+
+/*homeのメニューのボタン調整 */
+.top-menu nav button {
+  flex: 1;                  /* ボタンを横幅いっぱいに均等 */
+  min-width: 80px;           /* 最小幅を設定 */
+  padding: 10px 0;           /* 高さを調整 */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: white;
+  color: #1976d2;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+/* homeメイン */
+main {
+  padding: 20px;
+  text-align: center;
+}
+
+/* homeメイン */
+main h2 {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+/* homeメイン */
+main p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.login-container {
   background: #fff;
   padding: 30px 40px;
   border-radius: 10px;
@@ -16,6 +114,17 @@ body {
   text-align: center;
 }
 
+.chat-container {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  width: 500px;
+  height: 500px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* chat-containerの中身 */
 .input-area {
   display: flex;             /* 横並びにする */
   align-items: center;       /* 縦位置をそろえる */
@@ -23,7 +132,7 @@ body {
   margin-top: 10px;
 }
 
-/* 入力ボックス */
+/* chat-containerの中身　入力ボックス */
 #messageInput {
   flex: 1;                   /* 空いた幅を自動で広げる */
   padding: 10px;
@@ -32,9 +141,9 @@ body {
   font-size: 14px;
 }
 
-/* 送信ボタン */
+/* chat-containerの中身　送信ボタン */
 #sendBtn {
-    width: 100px;
+  width: 100px;
   padding: 10px 20px;
   background-color: orange;
   color: white;
@@ -44,6 +153,7 @@ body {
   font-size: 14px;
 }
 
+/* chat-containerの中身　送信ボタン */
 #sendBtn:hover {
   background-color: #145ca4;
 }

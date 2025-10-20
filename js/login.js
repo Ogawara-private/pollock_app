@@ -6,5 +6,6 @@ document.getElementById("loginBtn").addEventListener("click", () => {
   }
   // ローカルストレージに保存して次の画面へ
   localStorage.setItem("chatUser", name);
-  window.location.href = "chat.html";
+  // ホーム画面へ遷移
+  window.location.href = "home.html";
 });
