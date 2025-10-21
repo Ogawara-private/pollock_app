@@ -12,6 +12,7 @@
     <nav>
       <button id="homeBtn">🏠 ホーム</button>
       <button id="chatBtn">💬 チャット</button>
+      <button id="postentranceBtn">📚 記録</button>
       <button id="logoutBtn">🚪 ログアウト</button>
     </nav>
   </header>
@@ -19,7 +20,26 @@
   <!-- メインコンテンツ -->
   <main>
     <h2 id="welcome"></h2>
-    <p>ここからチャットや他の機能にアクセスできます。</p>
+    
+  <div class="widget-container">
+    <!-- 試験日まで -->
+    <div class="widget" id="examCountdown">
+      <h3>資格試験まであと</h3>
+      <p id="daysLeft">0日</p>
+    </div>
+
+    <!-- 学習時間グラフ -->
+    <div class="widget" id="studyTimeChart">
+      <h3>今週の学習時間</h3>
+      <canvas id="weeklyChart"></canvas>
+    </div>
+
+    <!-- 最近の学習履歴 -->
+    <div class="widget" id="recentHistory">
+      <h3>最近の学習履歴</h3>
+      <ul id="historyList"></ul>
+    </div>
+  </div>
   </main>
 
   <script>
@@ -36,6 +56,9 @@
     });
     document.getElementById('chatBtn').addEventListener('click', () => {
       window.location.href = 'chat.html';
+    });
+     document.getElementById('postentranceBtn').addEventListener('click', () => {
+      window.location.href = 'post.html';
     });
     document.getElementById('logoutBtn').addEventListener('click', () => {
       localStorage.removeItem('chatUser');

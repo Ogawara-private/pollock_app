@@ -105,6 +105,24 @@ main p {
   color: #333;
 }
 
+/* homeウィジェット1 */
+.widget-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* homeウィジェット2 */
+.widget {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  width: 250px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+
+/* ログイン画面 */
 .login-container {
   background: #fff;
   padding: 30px 40px;
@@ -114,17 +132,27 @@ main p {
   text-align: center;
 }
 
+/* 新規登録画面 */
+.createprofile-container {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  width: 500px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* チャット画面 */
 .chat-container {
   background: #fff;
   padding: 30px 40px;
   border-radius: 10px;
   width: 500px;
-  height: 500px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   text-align: center;
 }
 
-/* chat-containerの中身 */
+/* チャットの入力ボックス */
 .input-area {
   display: flex;             /* 横並びにする */
   align-items: center;       /* 縦位置をそろえる */
@@ -132,7 +160,7 @@ main p {
   margin-top: 10px;
 }
 
-/* chat-containerの中身　入力ボックス */
+/* チャットの入力ボックス */
 #messageInput {
   flex: 1;                   /* 空いた幅を自動で広げる */
   padding: 10px;
@@ -141,9 +169,9 @@ main p {
   font-size: 14px;
 }
 
-/* chat-containerの中身　送信ボタン */
+/* チャットの送信ボタン */
 #sendBtn {
-  width: 100px;
+    width: 100px;
   padding: 10px 20px;
   background-color: orange;
   color: white;
@@ -153,7 +181,7 @@ main p {
   font-size: 14px;
 }
 
-/* chat-containerの中身　送信ボタン */
+/* チャットの送信ボタンのホバー */
 #sendBtn:hover {
   background-color: #145ca4;
 }

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>投稿 - 資格勉強チャットアプリ</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="post-container">
+    <h2>新しいウィジェット投稿</h2>
+
+    <label for="widgetType">種類:</label>
+    <select id="widgetType">
+      <option value="exam">資格試験までの日数</option>
+      <option value="study">学習時間</option>
+      <option value="memo">メモ/学習履歴</option>
+    </select>
+
+    <label for="widgetContent">内容:</label>
+    <textarea id="widgetContent" placeholder="ここに内容を入力"></textarea>
+
+    <button id="postBtn">投稿</button>
+  </div>
+
+  <script src="js/postWidget.js"></script>
+</body>
+</html>
