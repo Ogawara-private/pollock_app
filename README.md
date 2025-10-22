@@ -1,5 +1,6 @@
 # ファイル構成
 
+<code>
 pollock-app/
 ├── index.html # ログイン画面
 ├── chat.html # チャット画面
@@ -13,7 +14,7 @@ pollock-app/
 ├── createprofile.js # 新規登録用 JS
 ├── post.js # 投稿画面用 JS
 └── chat.js # チャット画面用 JS
-
+</code>
 # pollock_app
 
 ポロック\_資格試験勉強チャットアプリ要件定義書
