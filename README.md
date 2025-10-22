@@ -1,18 +1,18 @@
 # ファイル構成
 
 pollock-app/
-├── index.html(ログイン画面)
-├── chat.html(チャット画面)
-├── createprofile.html(新規登録画面)
-├── home.html(ホーム画面)
-├── post.html(投稿画面)
+├── index.html # ログイン画面
+├── chat.html # チャット画面
+├── createprofile.html # 新規登録画面
+├── home.html # ホーム画面
+├── post.html # 投稿画面
 ├── css/
-│ └── style.css
+│ └── style.css # 共通スタイル
 └── js/
-├── login.js(ログイン画面の JS)
-├── createprofile.js(新規登録画面の JS)
-├── post.js(投稿画面の JS)
-└── chat.js(チャット画面の JS)
+├── login.js # ログイン用 JS
+├── createprofile.js # 新規登録用 JS
+├── post.js # 投稿画面用 JS
+└── chat.js # チャット画面用 JS
 
 # pollock_app
 
