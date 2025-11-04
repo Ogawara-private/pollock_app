@@ -188,49 +188,170 @@ main p {
   text-align: center;
 }
 
-/* チャット画面 */
-.chat-container {
-  background: #fff;
-  padding: 30px 40px;
-  border-radius: 10px;
-  width: 500px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  text-align: center;
+/* チャット画面 メインコンテンツのスタイル*/
+.chat-main {
+  display: flex;
+  height: calc(100vh - 80px);
 }
 
-/* チャットの入力ボックス */
+/* チャット画面 グループリスト全体のスタイル*/
+.group-list {
+  width: 25%;
+  background-color: #f7f7f7;
+  border-right: 1px solid #ccc;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+/* チャット画面 グループリストのスタイル打消し*/
+.group-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* チャット画面 グループリストのスタイル*/
+.group-list li {
+  padding: 10px;
+  margin: 5px 0;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+/* チャット画面 グループリストのホバー*/
+.group-list li:hover {
+  background-color: #e0e0e0;
+}
+
+/* チャット画面 大枠*/
+.chat-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+/* チャット画面 メッセージ*/
+#messages {
+  flex: 1;
+  list-style: none;
+  overflow-y: auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+}
+
+/* チャット画面 入力エリア全体*/
 .input-area {
-  display: flex;             /* 横並びにする */
-  align-items: center;       /* 縦位置をそろえる */
-  gap: 10px;                 /* 入力欄とボタンの間に余白を入れる */
+  display: flex;
   margin-top: 10px;
 }
 
-/* チャットの入力ボックス */
+/* チャット画面 入力エリア*/
 #messageInput {
-  flex: 1;                   /* 空いた幅を自動で広げる */
-  padding: 10px;
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 14px;
 }
 
-/* チャットの送信ボタン */
+/* チャット画面　ボタン */
 #sendBtn {
-    width: 100px;
-  padding: 10px 20px;
-  background-color: orange;
-  color: white;
+  margin-left: 8px;
+  padding: 8px 16px;
+  width: 80px;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
+  background-color: orange;
+  color: #fff;
   cursor: pointer;
-  font-size: 14px;
 }
 
-/* チャットの送信ボタンのホバー */
-#sendBtn:hover {
-  background-color: #145ca4;
+/* チャット画面　吹き出し全体 */
+.message {
+  position: relative;
+  max-width: 70%;
+  margin: 8px;
+  padding: 10px 14px;
+  border-radius: 15px;
+  word-wrap: break-word;
 }
+
+/* チャット画面　自分のメッセージ（右） */
+.message.self {
+  background-color: #3b82f6;
+  color: white;
+  align-self: flex-end;
+  border-bottom-right-radius: 0;
+}
+
+/* チャット画面　他人のメッセージ（左） */
+.message.other {
+  background-color: #e5e5ea;
+  color: #000;
+  align-self: flex-start;
+  border-bottom-left-radius: 0;
+}
+
+/* チャット画面　メッセージアクションのスタイル */
+.message-actions {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  gap: 6px;
+}
+
+/* チャット画面　スタンプボタン（トリガー） */
+.stamp-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  transition: transform 0.1s ease;
+}
+
+/* チャット画面　スタンプボタンホバー */
+.stamp-btn:hover {
+  transform: scale(1.2);
+}
+
+/*  チャット画面　スタンプ一覧ポップアップ */
+.stamp-popup {
+  position: absolute;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  gap: 6px;
+  padding: 6px;
+  z-index: 9999; /* ←これが超重要！ */
+}
+
+/*  チャット画面　スタンプ一覧ポップアップボタン */
+.stamp-popup button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+/*  チャット画面　スタンプ一覧ポップアップボタンホバー */
+.stamp-popup button:hover {
+  transform: scale(1.2);
+}
+
+/*  チャット画面 スタンプ表示（押された状態） */
+.stamp-display {
+  font-size: 18px;
+}
+/* チャット画面　メッセージをflex配置（左右に分かれるように） */
+#messages {
+  display: flex;
+  flex-direction: column;
+}
+
 
 /* 勉強記録のページレイアウト */
 .post-page {
