@@ -70,7 +70,7 @@ studyPosts.forEach((p) => {
 const labels = Object.keys(hoursByExam);
 const data = Object.values(hoursByExam);
 
-// ランダムカラー生成（任意入力可能）
+// ランダムカラー生成（任意入力でもOK！）
 const colors = labels.map(() => {
   const r = Math.floor(Math.random() * 255);
   const g = Math.floor(Math.random() * 255);
@@ -97,23 +97,7 @@ if (ctx && typeof Chart !== "undefined") {
     options: {
       responsive: true,
       maintainAspectRatio: false,
-      plugins: {
-        legend: { display: false },
-        // ✅ ここがタイトル設定部分！
-        title: {
-          display: true,
-          text: "今週の資格別学習時間", // ← 好きなタイトル文字をここに
-          font: {
-            size: 16,
-            weight: "bold",
-          },
-          color: "#333",
-          padding: {
-            top: 10,
-            bottom: 20,
-          },
-        },
-      },
+      plugins: { legend: { display: false } },
       scales: {
         y: {
           beginAtZero: true,
