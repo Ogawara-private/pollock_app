@@ -151,21 +151,45 @@ main p {
   color: #333;
 }
 
-/* homeウィジェット1 */
+/* 全体のウィジェット配置 */
 .widget-container {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3列構成 */
+  gap: 1rem;
+  padding: 1rem;
 }
 
-/* homeウィジェット2 */
+/* 共通スタイル */
 .widget {
   background: #fff;
-  padding: 15px;
-  border-radius: 10px;
-  width: 250px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 1rem;
+  text-align: center;
 }
+
+/* グラフウィジェット */
+#studyTimeChart {
+  height: auto; /* 高さは自動 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#studyTimeChart canvas {
+  width: 100% !important;  /* Chart.jsのレスポンシブと整合性を取る */
+  height: auto !important;
+  max-width: 600px;        /* 最大幅を制限 */
+  aspect-ratio: 2 / 1;     /* 横2：縦1の比率を維持 */
+}
+
+/* タイトル */
+.widget h3 {
+  text-align: center;
+  margin-bottom: 0.75rem;
+}
+
+
 
 
 /* ログイン画面 */
@@ -317,21 +341,32 @@ main p {
 
 /*  チャット画面　スタンプ一覧ポップアップ */
 .stamp-popup {
-  position: absolute;
   background: #fff;
   border: 1px solid #ccc;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   display: flex;
-  gap: 6px;
+  justify-content: space-around;
   padding: 6px;
-  z-index: 9999; /* ←これが超重要！ */
+  position: absolute;
+  z-index: 9999;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.15s ease-out;
+  flex-wrap: nowrap; /* 横一列に表示 */
+  white-space: nowrap;
+}
+
+/*  チャット画面　スタンプ一覧ポップアップ */
+.stamp-popup.show {
+  opacity: 1;
+  transform: scale(1);
 }
 
 /*  チャット画面　スタンプ一覧ポップアップボタン */
 .stamp-popup button {
-  background: none;
   border: none;
+  background: none;
   font-size: 20px;
   cursor: pointer;
   transition: transform 0.1s;
@@ -339,7 +374,7 @@ main p {
 
 /*  チャット画面　スタンプ一覧ポップアップボタンホバー */
 .stamp-popup button:hover {
-  transform: scale(1.2);
+  transform: scale(1.3);
 }
 
 /*  チャット画面 スタンプ表示（押された状態） */

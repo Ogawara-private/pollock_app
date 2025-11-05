@@ -104,10 +104,31 @@ messagesList.addEventListener("click", (e) => {
     // 押したボタンの位置に表示
     document.body.appendChild(popup);
 
-    // ボタン位置を基準にポップアップ位置を決定
     const rect = e.target.getBoundingClientRect();
-    popup.style.top = `${rect.bottom + window.scrollY + 4}px`; // ボタンの下に表示
-    popup.style.left = `${rect.left + window.scrollX}px`; // 左座標
+    const popupRect = popup.getBoundingClientRect();
+    const screenWidth = window.innerWidth;
+
+    // デフォルト位置（ボタンのすぐ下）
+    let left = rect.left + window.scrollX;
+    const top = rect.bottom + window.scrollY + 6;
+
+    // 右端にはみ出す場合は左寄せ
+    if (left + popupRect.width > screenWidth - 10) {
+      left = screenWidth - popupRect.width - 10;
+    }
+
+    // 左端にも出ないように
+    if (left < 10) {
+      left = 10;
+    }
+
+    popup.style.position = "absolute";
+    popup.style.top = `${top}px`;
+    popup.style.left = `${left}px`;
+    popup.style.zIndex = "9999";
+
+    // アニメーション
+    setTimeout(() => popup.classList.add("show"), 10);
   }
 });
 
