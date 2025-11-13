@@ -1,0 +1,457 @@
+/*基本共通部分*/
+body {
+  font-family: sans-serif;
+  background: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+input {
+  width: 50%;
+  padding: 8px;
+  margin: 8px 0;
+}
+
+button {
+  text-align: center;
+  width: 50%;
+  padding: 8px;
+  margin: 8px 0;
+  background: orange;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+h1 {
+    text-align: center;
+    color: orange;
+}
+
+h2 {
+    text-align: center;
+    color: orange;
+}
+
+h3 {
+    color: red;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+li {
+  margin: 5px 0;
+}
+
+/*homeのBodyに適応 */
+.home-body {
+  font-family: sans-serif;
+  margin: 0;
+  background: #f8f8f8;
+  display: block; /* ← flex を外す */
+}
+
+/*homeのBodyに適応 */
+.top-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: orange;
+  color: white;
+  padding: 10px 20px;
+}
+
+/*homeのBodyに適応 */
+.top-menu h1 {
+  font-size: 20px;
+}
+
+/*homeのBodyに適応 */
+.top-menu nav button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: white;
+  color: orange;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+/*homeのタイトル */
+.home-title {
+  color: white;
+}
+
+/*homeのメニューの調整 */
+.top-menu {
+  display: flex;
+  justify-content: space-between; /* 左右に分ける */
+  align-items: center;            /* 垂直中央揃え */
+  background-color: orange;
+  color: white;
+  padding: 10px 20px;
+  flex-wrap: wrap; /* 画面が狭いと折り返す */
+}
+
+/*homeのメニューの調整2 */
+.top-menu nav {
+  display: flex;        /* 横並びにする */
+  gap: 10px;            /* ボタン間のスペース */
+  flex: 1;              /* 余白を均等に */
+  justify-content: flex-end; /* 右寄せ */
+}
+
+/*homeのメニューの効果 */
+.top-menu nav button:hover {
+  background-color: #e0e0e0;
+}
+
+/*homeのメニューのボタン調整 */
+.top-menu nav button {
+  flex: 1;                  /* ボタンを横幅いっぱいに均等 */
+  min-width: 80px;           /* 最小幅を設定 */
+  padding: 10px 0;           /* 高さを調整 */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: white;
+  color: #1976d2;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+/* homeメイン */
+main {
+  padding: 20px;
+  text-align: center;
+}
+
+/* homeメイン */
+main h2 {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+/* homeメイン */
+main p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* 全体のウィジェット配置 */
+.widget-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3列構成 */
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* 共通スタイル */
+.widget {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 1rem;
+  text-align: center;
+}
+
+/* グラフウィジェット */
+#studyTimeChart {
+  height: auto; /* 高さは自動 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#studyTimeChart canvas {
+  width: 100% !important;  /* Chart.jsのレスポンシブと整合性を取る */
+  height: auto !important;
+  max-width: 600px;        /* 最大幅を制限 */
+  aspect-ratio: 2 / 1;     /* 横2：縦1の比率を維持 */
+}
+
+/* タイトル */
+.widget h3 {
+  text-align: center;
+  margin-bottom: 0.75rem;
+}
+
+
+/* ログイン画面 */
+.login-container {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  width: 500px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* 新規登録画面 */
+.createprofile-container {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  width: 500px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* チャット画面 メインコンテンツのスタイル*/
+.chat-main {
+  display: flex;
+  height: calc(100vh - 80px);
+}
+
+/* チャット画面 グループリスト全体のスタイル*/
+.group-list {
+  width: 25%;
+  background-color: #f7f7f7;
+  border-right: 1px solid #ccc;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+/* チャット画面 グループリストのスタイル打消し*/
+.group-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* チャット画面 グループリストのスタイル*/
+.group-list li {
+  padding: 10px;
+  margin: 5px 0;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+/* チャット画面 グループリストのホバー*/
+.group-list li:hover {
+  background-color: #e0e0e0;
+}
+
+/* チャット画面 大枠*/
+.chat-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+/* チャット画面 メッセージ*/
+#messages {
+  flex: 1;
+  list-style: none;
+  overflow-y: auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+}
+
+/* チャット画面 入力エリア全体*/
+.input-area {
+  display: flex;
+  margin-top: 10px;
+}
+
+/* チャット画面 入力エリア*/
+#messageInput {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* チャット画面　ボタン */
+#sendBtn {
+  margin-left: 8px;
+  padding: 8px 16px;
+  width: 80px;
+  border: none;
+  border-radius: 8px;
+  background-color: orange;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* チャット画面　吹き出し全体 */
+.message {
+  position: relative;
+  max-width: 70%;
+  margin: 8px;
+  padding: 10px 14px;
+  border-radius: 15px;
+  word-wrap: break-word;
+}
+
+/* チャット画面　自分のメッセージ（右） */
+.message.self {
+  background-color: #3b82f6;
+  color: white;
+  align-self: flex-end;
+  border-bottom-right-radius: 0;
+}
+
+/* チャット画面　他人のメッセージ（左） */
+.message.other {
+  background-color: #e5e5ea;
+  color: #000;
+  align-self: flex-start;
+  border-bottom-left-radius: 0;
+}
+
+/* チャット画面　メッセージアクションのスタイル */
+.message-actions {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  gap: 6px;
+}
+
+/* チャット画面　スタンプボタン（トリガー） */
+.stamp-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  transition: transform 0.1s ease;
+}
+
+/* チャット画面　スタンプボタンホバー */
+.stamp-btn:hover {
+  transform: scale(1.2);
+}
+
+/*  チャット画面　スタンプ一覧ポップアップ */
+.stamp-popup {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-around;
+  padding: 6px;
+  position: absolute;
+  z-index: 9999;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.15s ease-out;
+  flex-wrap: nowrap; /* 横一列に表示 */
+  white-space: nowrap;
+}
+
+/*  チャット画面　スタンプ一覧ポップアップ */
+.stamp-popup.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/*  チャット画面　スタンプ一覧ポップアップボタン */
+.stamp-popup button {
+  border: none;
+  background: none;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+/*  チャット画面　スタンプ一覧ポップアップボタンホバー */
+.stamp-popup button:hover {
+  transform: scale(1.3);
+}
+
+/*  チャット画面 スタンプ表示（押された状態） */
+.stamp-display {
+  font-size: 18px;
+}
+/* チャット画面　メッセージをflex配置（左右に分かれるように） */
+#messages {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* 勉強記録のページレイアウト */
+.post-page {
+  display: flex;
+  gap: 20px;
+}
+
+/* 勉強記録の履歴ページレイアウト */
+.post-history {
+  width: 35%;
+  max-height: 70vh;
+  overflow-y: auto;
+  border-right: 1px solid #ccc;
+  padding-right: 10px;
+}
+
+/* 勉強記録の投稿レイアウト */
+.post-form {
+  flex: 1;
+}
+
+/* 勉強記録各フォームの共通部分 */
+.input-field {
+  width: 40%;
+  padding: 8px;
+  margin: 6px 0 12px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/*　勉強記録試験受験日フォーム専用 */
+.exam-form {
+  background-color: #f0f8ff;
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/*　勉強記録試験受験日フォーム専用 */
+.countdown-text {
+  font-weight: bold;
+  color: #0078d4;
+  margin-top: 8px;
+}
+
+/* 勉強記録学習時間フォーム専用 */
+.study-form {
+  background-color: #fff8e1;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+/* 勉強記録メモフォーム専用 */
+.memo-form {
+  background-color: #fefefe;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+/* 勉強記録メモフォーム専用 */
+.memo-textarea {
+  width: 100%;
+  height: 100px;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
