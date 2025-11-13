@@ -31,12 +31,25 @@
     <div class="widget" id="recentHistory">
       <h3>最近の学習履歴</h3>
       <ul id="historyList"></ul>
-    </div>       
+    </div>
+    
+    <!-- 最近の学習ランキング -->
+    <div class="widget" id="rankingWidget">
+      <h3>学習時間ランキング🏆</h3>
+      <ol id="rankingList"></ol>
+    </div>    
+
   </div>
   <!-- 学習時間グラフ -->
     <div class="widget" id="studyTimeChart">
-      <h3>今週の学習時間</h3>
-      <canvas id="weeklyChart"></canvas>
+      <h3>学習時間</h3>
+    <div style="display: flex; gap: 20px; height: 300px;">
+      <!-- 左：資格別学習時間 -->
+      <canvas id="weeklyChart" style="flex: 1;"></canvas>
+
+      <!-- 右：先週・今週比較 -->
+      <canvas id="weeklyComparisonChart" style="flex: 1;"></canvas>
+    </div>
     </div> 
   </main>
 
